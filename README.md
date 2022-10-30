@@ -8,16 +8,70 @@
 
 ## 팔팔한 형제들 팀 소개
 ### FE
-| 이름        | github                           |
-| --------------- |  -------------------------------- |
-| 이주영 (팀장)   | https://github.com/CodyMan0 |
-| 심의석 (부팀장) | https://github.com/shimeeuisuk |
-| 장태희          | https://github.com/jangth0655 |
-| 최영준          | https://github.com/choi2021 |
-| 송경용  (공지)        | https://github.com/strongsongky |
-| 박경은  (서기)       | https://github.com/KellyPark96 |
-| 강효주          |  https://github.com/gywn9708 | 
-| 권용현          |  https://github.com/YongHyunKwon  |
+<table>
+  <tr>
+    <td>
+        <a href="https://github.com/CodyMan0">            
+	    <img src="https://8-otj4940.slack.com/team/U04838NJ46P" width="100px" />
+        </a>
+    </td>
+    <td>
+        <a href="https://github.com/shimeeuisuk">
+            <img src="https://8-otj4940.slack.com/team/U0480DNQHTP" width="100px" />
+        </a>
+    </td>
+    <td>
+        <a href="https://github.com/jangth0655"> 
+            <img src="" width="100px" />
+        </a>
+    </td>
+    <td>
+        <a href="https://github.com/choi2021">
+	    <img src="" width="100px" />
+        </a>
+    </td>
+    <td>
+        <a href="https://github.com/strongsongky">
+	    <img src="https://8-otj4940.slack.com/team/U04811FTFHB" width="100px" />
+        </a>
+    </td>
+    <td>
+        <a href="https://github.com/KellyPark96">
+	    <img src="" width="100px" />
+        </a>
+    </td>
+    <td>
+        <a href="https://github.com/gywn9708">
+	    <img src="" width="100px" />
+        </a>
+    </td>
+    <td>
+        <a href="https://github.com/YongHyunKwon">
+	    <img src="https://8-otj4940.slack.com/team/U048U243N56" width="100px" />
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td><b>이주영(팀장)</b></td>
+    <td><b>심의석(부팀장)</b></td>
+    <td><b>장태희</b></td>
+    <td><b>최영준</b></td>
+    <td><b>송경용(공지)</b></td>
+    <td><b>박경은(서기)</b></td>
+    <td><b>강효주</b></td>
+    <td><b>권용현</b></td>
+  </tr>
+  <tr>
+    <td><b>Front-End</b></td>
+    <td><b>Front-End</b></td>
+    <td><b>Front-End</b></td>
+    <td><b>Front-End</b></td>
+    <td><b>Front-End</b></td>
+    <td><b>Front-End</b></td>
+    <td><b>Front-End</b></td>
+    <td><b>Front-End</b></td>
+  </tr>
+</table>
 
 
 ## 🛠 기술 스택
@@ -66,14 +120,14 @@ $ npm start
 ## 🔗 위키 링크
 
 [위키 링크 보러가기](https://github.com/wanted-freeOnBoarding-8/1-1_assignment/wiki)
-- 저희들의 코드컨벤션, 커밋메시지컨벤션, 에러노트를 정리해두었습니다.😁
+- 저희들의 코드컨벤션, 커밋메시지컨벤션, 1주차 1차 프로젝트를 통해 토론한 Action-Point를 정리해두었습니다.😁
 
 
 ## 🔗 배포 링크
 
-[베포 링크 보러가기](https://8team-todolist.netlify.app/)
+[베포 링크 보러가기]()
 
-- 해당 프로젝트는 netlify를 통해 배포하였습니다.
+- 해당 프로젝트는 를 AWS S3통해 배포하였습니다.
 
 
 
