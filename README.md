@@ -12,42 +12,42 @@
   <tr>
     <td>
         <a href="https://github.com/CodyMan0">            
-	    <img src="https://8-otj4940.slack.com/team/U04838NJ46P" width="100px" />
+	    <img src="https://avatars.githubusercontent.com/u/93697790?v=4" width="100px" />
         </a>
     </td>
     <td>
         <a href="https://github.com/shimeeuisuk">
-            <img src="https://8-otj4940.slack.com/team/U0480DNQHTP" width="100px" />
+            <img src="https://avatars.githubusercontent.com/u/104304569?v=4" width="100px" />
         </a>
     </td>
     <td>
         <a href="https://github.com/jangth0655"> 
-            <img src="" width="100px" />
+            <img src="https://avatars.githubusercontent.com/u/83333409?v=4" width="100px" />
         </a>
     </td>
     <td>
         <a href="https://github.com/choi2021">
-	    <img src="" width="100px" />
+	    <img src="https://avatars.githubusercontent.com/u/80830981?v=4" width="100px" />
         </a>
     </td>
     <td>
         <a href="https://github.com/strongsongky">
-	    <img src="https://8-otj4940.slack.com/team/U04811FTFHB" width="100px" />
+	    <img src="https://avatars.githubusercontent.com/u/102295416?v=4" width="100px" />
         </a>
     </td>
     <td>
         <a href="https://github.com/KellyPark96">
-	    <img src="" width="100px" />
+	    <img src="https://avatars.githubusercontent.com/u/96809147?v=4" width="100px" />
         </a>
     </td>
     <td>
         <a href="https://github.com/gywn9708">
-	    <img src="" width="100px" />
+	    <img src="https://avatars.githubusercontent.com/u/107469939?v=4" width="100px" />
         </a>
     </td>
     <td>
         <a href="https://github.com/YongHyunKwon">
-	    <img src="https://8-otj4940.slack.com/team/U048U243N56" width="100px" />
+	    <img src="https://avatars.githubusercontent.com/u/13326980?v=4" width="100px" />
         </a>
     </td>
   </tr>
@@ -101,7 +101,7 @@
 
 1. root폴더에 .env 파일을 생성합니다.
 ```
-  REACT_APP_URL=https://pre-onboarding-selection-task.shop
+  REACT_APP_TOKEN={자신의 github에서 Developer-setting 에서 발행한 access-token 사용}
 ```
 2. 의존성 패키지를 설치합니다.
 ```zsh
@@ -140,33 +140,47 @@ $ npm start
 ```
 📦src
  ┣ 📂components
- ┃ ┃ ┣ 📜Layout.jsx
- ┃ ┃ ┗ 📜Navbar.jsx
- ┃ ┣ 📂auth
- ┃ ┃ ┣ 📜AuthForm.jsx
- ┃ ┃ ┣ 📜Button.jsx
- ┃ ┃ ┣ 📜Input.jsx
- ┃ ┃ ┣ 📜ErrorMessage.jsx
- ┃ ┃ ┗  📜Title.jsx
- ┃ ┣ 📂todo
- ┃ ┃ ┣ 📜EditForm.jsx
- ┃ ┃ ┣ 📜TodoForm.jsx
- ┃ ┃ ┗ 📜TodoItem.jsx
+ ┃ ┃ ┣ 📂issueItem
+ ┃ ┃ ┃ ┣ 📜IssueItem.jsx
+ ┃ ┃ ┃ ┗  📜style.js
+ ┃ ┃ ┣ 📂AdBox
+ ┃ ┃ ┃ ┣ 📜AbBox.jsx
+ ┃ ┃ ┃ ┗  📜style.js
+ ┃ ┃ ┣ 📂errorContent
+ ┃ ┃ ┃ ┣ 📜ErrorContent.jsx
+ ┃ ┃ ┃ ┗  📜style.js
+ ┃ ┃ ┣ 📂header
+ ┃ ┃ ┃ ┣ 📜Header.jsx
+ ┃ ┃ ┃ ┗  📜style.js
+ ┃ ┃ ┣ 📂issueContent
+ ┃ ┃ ┃ ┣ 📜IssueContent.jsx
+ ┃ ┃ ┃ ┗  📜style.js
+ ┃ ┃ ┣ 📂issueList
+ ┃ ┃ ┃ ┣ 📜IssueList.jsx
+ ┃ ┃ ┃ ┗  📜style.js
+ ┃ ┃ ┣ 📂layout
+ ┃ ┃ ┃ ┣ 📜Layout.jsx
+ ┃ ┃ ┃ ┗  📜style.js
+ ┃ ┃ ┣ 📂loader
+ ┃ ┃ ┃ ┣ 📜Loader.jsx
+ ┃ ┃ ┃ ┗  📜style.js
+ ┣ 📂context
+ ┃ ┗ 📜ListContext.jsx
+ ┣ 📂hooks
+ ┃ ┣ 📜useFetch.jsx
+ ┃ ┗ 📜useObservation.jsx
+ ┣ 📂network
+ ┃ ┗ 📜httpError.js
  ┣ 📂context
  ┃ ┗ 📜LoginContext.jsx
  ┣ 📂page
- ┃ ┣ 📜Auth.jsx
- ┃ ┗ 📜Todos.jsx
+ ┃ ┃ ┣ 📂Notfound
+ ┃ ┃ ┃ ┣ 📜Notfound.jsx
+ ┃ ┃ ┃ ┗ 📜styles.js
+ ┃ ┣ 📜Detail.jsx
+ ┃ ┗ 📜Home.jsx
  ┣ 📂style
- ┃ ┣ 📜GlobalStyle.js
- ┃ ┣ 📜theme.js
- ┃ ┗ 📜variable.js
- ┣ 📂utils
- ┃ ┣ 📜formatDayAndDate.js
- ┃ ┗ 📜localStorage.js
- ┃ ┣ 📂hooks
- ┃ ┃ ┣ 📜useFetch.jsx
- ┃ ┃ ┗ 📜useMutation.jsx
+ ┃ ┗ 📜GlobalStyle.js
  ┣ 📜App.js
  ┣ 📜index.js
  ┗ 📜router.js
@@ -178,72 +192,48 @@ $ npm start
 
 ## 👍 Best Practice 선정 이유
 
-- 리액트 커스텀 훅 사용: useMutation, useFetch로 네트워크 통신 로직의 재사용 
-
-- contextAPI 사용: 전역으로 로그인 상태관리
-
-- AuthForm 컴포넌트: 로그인과 회원가입에서 반복되는 부분  컴포넌트화를 통한 코드 중복 제거
-
+- 
 
 
 
 ## ✏️ 개선 부분
 
-- ESLint, Pretiier: 보다 엄격한 airbnb style을 적용한 ESLint로, 팀의 코드컨벤션을 통일했습니다. 
-
-- contextAPI: 반복적인 props 전달을 contextAPI로 쉽게 관리했습니다.
-
-- custom hook 사용: 로직의 재사용을 통해 코드를 간결하게 했습니다.
-
-- AuthForm 컴포넌트: 로그인/회원가입 페이지에서 반복되는 UI와 로직을 하나의 컴포넌트로 통일했습니다.
-
-
-
-
-## ✏️ 에러 해결과정 [위키의 dev노트 보러가기 😗](https://github.com/wanted-freeOnBoarding-8/1-1_assignment/wiki/Dev-%EB%85%B8%ED%8A%B8)
-
  하루동안 함께 시행착오를 한 기록을 담았습니다!
+ 
+두개 였던 API 하나로 사용한 이유 : 디테일로 들어가든 홈으로 가든 받아오는 List는 하나이기에 라우터 설정(리다이랙트)
+무한 API 호출 문제 해결!!  상세 페이지에서 메인으로 가도 상태 그대로를 가지고 있다. 공통 헤더는 레이아웃을 하나 만들어쓰면 편하다. 
+
+무한 스크롤 쓰면서 성능을 신경썼다!? 그래서 배열이 아닌 객체 자료구조를 선택하여 만들었다. 만약 해당 id값을 넣어서 가진 객체를 찾아라라고 한다면 배열은 처음부터 끝까지 찾아야하지만 객체는 key만 넣어주면 바로 가져올 수 있다. 시간 복잡도 측면에서는 객체가 배열보다 유리하다. 
+
+네티워크 통신을 위해 오브젝트 사용(데이터베이스 역할?)  (얕은 복사)-> 중복 제거,  시간 복잡도, 캐쉬, 성능 최적화
+캐시를 하여 성능 최적화하였다.
+배열로 데이터를 캐시를 한다면 중복이 발생 -> 따라서 오브젝트 사용 
+
+에러 
+상세페이지에서 리로딩 했을 경우, error-screen페이지가 나타남
+해결 
 
 
+
+## ✏️ action-point 보러가기 [위키의 dev노트 보러가기 😗](https://github.com/wanted-freeOnBoarding-8/1-1_assignment/wiki/Dev-%EB%85%B8%ED%8A%B8)
+
+ 
 
 ## ✨ 주요 기능
 
-<img width="700" src="https://user-images.githubusercontent.com/80830981/198387941-79f1713b-5145-43d5-a423-a402fb14d04e.png"/>
+<img width="700" src=""/>
 
 
 
-- 사용자는 로그인을 클릭하여 로그인 페이지로 이동 가능.
-- 사용자는 input 필드에 각각 이메일, 비밀번호를 기입한 뒤, 회원가입 버튼을 눌러 회원가입 가능.
-- 이메일, 비밀번호 유효성 검사 조건   
- 	- 이메일 조건: @포함,   
-	- 비밀번호 조건: 8자 이상
-- 입력한 이메일, 비밀번호 회원가입 조건 충족 시 회원가입 버튼 활성화.
-- signUp API 호출 성공 시 JWT를 로컬 스토리지에 저장 후 로그인 페이지로 이동.
-- 로컬 스토리지에 토근이 있는 상태로 / 페이지에 접속할 경우 /todo 페이지로 연결.
 
 
 </br>
 
 
-<img width="700" src="https://user-images.githubusercontent.com/80830981/198385277-cb577473-ceaf-4c00-958e-758e96f3d452.png"/>
+<img width="700" src=""/>
 
 
 
-Todo 페이지 설명
-* /todo 페이지 노출 항목
-  - 현재 날짜
-  - 로그아웃 버튼
-  - Todo List
-  - Todo Input
-  - Todo 추가 버튼
-- /todo 페이지에 접근하면 현재 등록된 Todo 목록을 보여줍니다.
-- Todo Input 창에 내용 입력 후 + 버튼을 클릭하면 새로운 Todo가 추가됩니다.
-  - Todo Input 창에 내용이 없으면 Todo는 추가되지 않습니다.
-- Todo 항목에는 아래와 같은 기능이 있습니다.
-  - 체크: Todo 항목 완료 및 취소를 할 수 있습니다.
-  - 수정: 수정 버튼을 클릭하면 수정하기 Input 창이 뜨고 수정 및 취소를 선택할 수 있습니다.
-  - 삭제: 선택한 Todo 항목을 삭제하는 기능입니다.
-- 로그아웃 버튼을 누르면 localStorage 에서 토큰을 삭제합니다.
 
 
 
