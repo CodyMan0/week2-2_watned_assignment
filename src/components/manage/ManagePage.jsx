@@ -1,8 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import Content from '../Content';
+import ContentTitle from '../ContentTitle';
+import Header from '../Header';
 
 const ManagePage = () => {
-  return <Container>ManagePage</Container>;
+  return (
+    <Container>
+      <Header />
+      <ContentTitle />
+      <Content />
+    </Container>
+  );
 };
 
 export default ManagePage;

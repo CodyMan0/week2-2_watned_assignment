@@ -9,7 +9,7 @@ import {
 export const OptionContext = createContext(null);
 
 export const OptionContextProvider = ({ children }) => {
-  const [option, setOption] = useState(true);
+  const [option, setOption] = useState(1);
   // optionBox를 Id 값으로 했다. 굳
   const onOptionHandler = (id) => {
     setOption(id);

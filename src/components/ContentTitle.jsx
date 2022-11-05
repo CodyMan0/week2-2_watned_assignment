@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useOption } from '../context/dataContext';
 
 const ContentTitle = () => {
+  const { option } = useOption();
   return (
     <Container>
-      <TitleName>대시보드</TitleName>
+      <TitleName>{option === 1 ? '대시보드' : '광고관리'}</TitleName>
       <Date>ContentTitle</Date>
     </Container>
   );

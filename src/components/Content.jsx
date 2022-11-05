@@ -1,12 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useOption } from '../context/dataContext';
+import AdManagement from './manage/AdManagement';
 import Statistics from './Statistics';
 
 const Content = () => {
+  const { option } = useOption();
   return (
     <Container>
-      <GraphTitle>통합 광고 현황</GraphTitle>
-      <Statistics />
+      {option === 1 ? (
+        <>
+          <GraphTitle>통합 광고 현황</GraphTitle>
+          <Statistics />
+        </>
+      ) : (
+        <AdManagement />
+      )}
     </Container>
   );
 };
