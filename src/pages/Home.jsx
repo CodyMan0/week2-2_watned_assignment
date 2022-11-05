@@ -17,5 +17,5 @@ export default Home;
 const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
 `;

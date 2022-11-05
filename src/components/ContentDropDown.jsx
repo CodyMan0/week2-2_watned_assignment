@@ -14,7 +14,7 @@ const ContentDropDown = () => {
         </SecondDropDown>
       </SubContainer>
       <ThirdDropDown>
-        <Dropdown title="클릭수">12dfdfdfdf 3</Dropdown>
+        <Dropdown title="주간">12dfdfdfdf 3</Dropdown>
       </ThirdDropDown>
     </Container>
   );

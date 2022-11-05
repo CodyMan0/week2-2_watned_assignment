@@ -20,4 +20,6 @@ const Container = styled.div`
 
 const GraphTitle = styled.div`
   padding-left: 60px;
+  padding-bottom: 20px;
+  font-weight: 500;
 `;
