@@ -30,5 +30,6 @@ module.exports = {
     'object-curly-newline': 0,
     'arrow-parens': 0,
     'no-confusing-config': 'off',
+    'react/jsx-one-expression-per-line': 'off',
   },
 };

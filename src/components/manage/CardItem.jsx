@@ -2,16 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import Information from './Information';
 
-const CardItem = () => {
+const CardItem = ({ ad }) => {
+  const { report } = ad;
+  console.log(report);
   return (
     <Container>
-      <Title>title</Title>
-      <Information />
-      <Information />
-      <Information />
-      <Information />
-      <Information />
-      <Information />
+      <Title>
+        {`${ad.adType === 'web' ? '웹광고' : '앱광고'}_${ad.title}`}
+      </Title>
+      <Information status={ad.status} />
+      <Information startDate={ad.startDate} />
+      <Information budget={ad.budget} />
+      <Information report={report.roas} />
+      <Information convValue={report.convValue} />
+      <Information cost={report.cost} />
       <Button type="button">수정하기</Button>
     </Container>
   );

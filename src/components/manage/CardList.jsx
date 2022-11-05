@@ -12,13 +12,13 @@ const CardList = () => {
     });
   }, [setCardList]);
 
+  const { ads } = cardList;
+
   return (
     <Container>
-      <CardItem />
-      <CardItem />
-      <CardItem />
-      <CardItem />
-      <CardItem />
+      {ads?.map((ad) => (
+        <CardItem key={ad.id} ad={ad} />
+      ))}
     </Container>
   );
 };
