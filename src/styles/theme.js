@@ -1,4 +1,5 @@
 const theme = {
+  hover: '#EDEFF1',
   blue: ' #586CF5',
   red: '#EB5757',
   yellow: '#FFAB40',
@@ -9,11 +10,11 @@ const theme = {
   middleFont: '20px',
   smallFont: '16px',
   smallerFont: '12px',
-  xs: 10,
-  s: 12,
-  m: 16,
-  l: 24,
-  xl: 32,
+  xs: '10px',
+  s: '12px',
+  m: '16px',
+  l: '24px',
+  xl: '32px',
 };
 
 export default theme;

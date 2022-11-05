@@ -9,8 +9,8 @@ const Sidebar = () => {
       <SubContainer>
         <Logo src="./images/Lever_BI 1.png" />
       </SubContainer>
-      <ServiceDropDown>1</ServiceDropDown>
-      <OptionBox>2</OptionBox>
+      <ServiceDropDown />
+      <OptionBox />
     </Container>
   );
 };
@@ -29,3 +29,5 @@ const Logo = styled.img`
   height: inherit;
   padding: 60px 150px 60px 40px;
 `;
+
+const AdCenter = styled.img``;

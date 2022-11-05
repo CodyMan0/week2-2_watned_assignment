@@ -6,8 +6,8 @@ import Sidebar from '../components/Sidebar';
 const Home = () => {
   return (
     <Container>
-      <Sidebar>1</Sidebar>
-      <ContentPage>2</ContentPage>
+      <Sidebar />
+      <ContentPage />
     </Container>
   );
 };
