@@ -7,7 +7,7 @@ const ServiceDropDown = () => {
   return (
     <Container>
       <Categories title="서비스" />
-      <Dropdown type="매드업" />
+      <Dropdown title="매드업" />
     </Container>
   );
 };

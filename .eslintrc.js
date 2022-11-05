@@ -29,6 +29,6 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'object-curly-newline': 0,
     'arrow-parens': 0,
-    camelcase: 0,
+    'no-confusing-config': 'off',
   },
 };
