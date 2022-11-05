@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContentPage from '../components/ContentPage';
-import Sidebar from '../components/Sidebar';
+import Sidebar from '../components/leftSide/Sidebar';
 
 const Home = () => {
   return (
