@@ -7,9 +7,7 @@ const CardItem = ({ ad }) => {
 
   return (
     <Container>
-      <Title>
-        {`${ad.adType === 'web' ? '웹광고' : '앱광고'}_${ad.title}`}
-      </Title>
+      <Title>{`${ad.adType === 'web' ? '웹광고' : '앱광고'}_${ad.title}`}</Title>
       <Information status={ad.status} />
       <Information startDate={ad.startDate} />
       <Information budget={ad.budget} />

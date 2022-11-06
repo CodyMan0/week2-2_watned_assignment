@@ -15,8 +15,6 @@ const Statistics = () => {
   const { report } = stateValues || {};
   const { daily } = report || {};
 
-  const variable = processingArray('cpc', daily);
-
   useEffect(() => {
     axios.get('/data/data.json').then((res) => {
       setStateValue(res.data);
@@ -36,7 +34,7 @@ const Statistics = () => {
   return (
     <Container>
       <CurrentState>
-        <StateIndicator />
+        <StateIndicator daily={daily} />
         <ContentDropDown />
         <GraphState>
           <Line data={data} options={options} />

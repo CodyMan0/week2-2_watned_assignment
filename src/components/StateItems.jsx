@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { TiArrowSortedDown, TiArrowSortedUp } from 'react-icons/ti';
+import vaildateCost from '../utils/vaildateCost';
 
-const StateItems = () => {
+const StateItems = ({ el }) => {
   return (
     <StateItem>
-      <StateItemTitle>title</StateItemTitle>
+      <StateItemTitle>{el.title}</StateItemTitle>
       <StateBox>
-        <span>수치</span>
+        <StateItemContent>{`${vaildateCost(el.content)}${el.unit}`}</StateItemContent>
         <p>
           <IconUp>
             <TiArrowSortedUp />
@@ -39,6 +40,11 @@ const StateItemTitle = styled.div`
   justify-self: center;
   height: 20px;
   color: ${(props) => props.theme.style.gray};
+`;
+
+const StateItemContent = styled.span`
+  font-weight: 700;
+  font-size: 16px;
 `;
 
 const StateBox = styled.div`

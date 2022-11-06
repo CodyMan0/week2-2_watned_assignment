@@ -1,14 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Information = ({
-  status,
-  startDate,
-  budget,
-  report,
-  convValue,
-  cost,
-}) => {
+const Information = ({ status, startDate, budget, report, convValue, cost }) => {
   return (
     <Container>
       <TitleBox>
