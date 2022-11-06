@@ -6,6 +6,7 @@ const ContentDropDown = () => {
   const [checkedTitle, setCheckedTitle] = useState({
     FirstContent: 'ROAS',
     SecondContent: '클릭수',
+    ThirdContent: '주간',
   });
   const onTitleClickHandler = (e, type) => {
     setCheckedTitle({ ...checkedTitle, [type]: e.target.innerText });
@@ -34,7 +35,11 @@ const ContentDropDown = () => {
         </SecondDropDown>
       </SubContainer>
       <ThirdDropDown>
-        <Dropdown title="주간">12dfdfdfdf 3</Dropdown>
+        <Dropdown
+          title={checkedTitle.ThirdContent}
+          type="ThirdContent"
+          onTitleClickHandler={onTitleClickHandler}
+        />
       </ThirdDropDown>
     </Container>
   );

@@ -1,18 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { useAddList } from '../../context/AdListContext';
+import { useAdList } from '../../context/AdListContext';
 import CardItem from './CardItem';
 
 const CardList = () => {
-  const [adList, setAdList, adTitle, setAdTitle, onTitleClickHandler, filterFunction] =
-    useAddList();
-
-  useEffect(() => {
-    axios.get('/data/adList.json').then((res) => {
-      setAdList(res.data);
-    });
-  }, [setAdList]);
+  const [adList, setAdList, adTitle, setAdTitle, onTitleClickHandler, filterFunction] = useAdList();
 
   return (
     <Container>

@@ -5,6 +5,7 @@ export const ContentContext = createContext(null);
 
 export const ContentContextProvider = ({ children }) => {
   const [contentData, setContentData] = useState([]);
+
   const { report } = contentData || {};
   const { daily } = report || {};
 
@@ -16,6 +17,7 @@ export const ContentContextProvider = ({ children }) => {
   const CONVVALUE = processingArray('convValue', daily);
 
   const AD_LIST = ['전체광고', '진행중', '완료'];
+  const DAY_LIST = ['주간', '일간'];
   const TEM_DATA = [
     {
       id: 1,
@@ -55,7 +57,10 @@ export const ContentContextProvider = ({ children }) => {
     },
   ];
 
-  const options = useMemo(() => [contentData, setContentData, TEM_DATA, AD_LIST], [contentData]);
+  const options = useMemo(
+    () => [contentData, setContentData, TEM_DATA, AD_LIST, DAY_LIST],
+    [contentData]
+  );
   return <ContentContext.Provider value={options}>{children}</ContentContext.Provider>;
 };
 

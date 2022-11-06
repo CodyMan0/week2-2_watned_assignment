@@ -29,5 +29,3 @@ const Logo = styled.img`
   height: inherit;
   padding: 60px 150px 60px 40px;
 `;
-
-const AdCenter = styled.img``;

@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 const AdListContext = createContext(null);
 
-export const useAddList = () => useContext(AdListContext);
+export const useAdList = () => useContext(AdListContext);
 
 export default function AdListProvider({ children }) {
   const [adList, setAdList] = useState([]);

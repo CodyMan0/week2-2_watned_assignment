@@ -1,16 +1,25 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { useAddList } from '../../context/AdListContext';
+import { useAdList } from '../../context/AdListContext';
+import { useContentData } from '../../context/dataContext';
 import Dropdown from '../leftSide/DropDown';
 import CardList from './CardList';
 
 const AdManagement = () => {
-  const [adList, setAdList, adTitle, setAdTitle, onTitleClickHandler] = useAddList();
+  const [adList, setAdList, adTitle, setAdTitle, onTitleClickHandler] = useAdList();
+  const [title, setTitle] = useState('전체광고');
+
+  useEffect(() => {
+    axios.get('/data/adList.json').then((res) => {
+      setAdList(res.data);
+    });
+  }, []);
 
   return (
     <Container>
       <Header>
-        <Dropdown title="전체광고" onTitleClickHandler={onTitleClickHandler} />
+        <Dropdown title={title} onTitleClickHandler={onTitleClickHandler} />
       </Header>
       <CardList />
     </Container>

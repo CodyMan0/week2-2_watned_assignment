@@ -11,15 +11,15 @@ const Home = () => {
   const { option } = useOption();
 
   return (
-    <Container>
-      <ContentContextProvider>
-        <AdListProvider>
+    <ContentContextProvider>
+      <AdListProvider>
+        <Container>
           <Sidebar />
           {option === 1 && <ContentPage />}
           {option === 2 && <ManagePage />}
-        </AdListProvider>
-      </ContentContextProvider>
-    </Container>
+        </Container>
+      </AdListProvider>
+    </ContentContextProvider>
   );
 };
 

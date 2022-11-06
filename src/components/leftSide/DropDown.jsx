@@ -5,22 +5,26 @@ import { useContentData } from '../../context/dataContext';
 
 const Dropdown = ({ title, onTitleClickHandler, type }) => {
   const [isClicked, setIsClicked] = useState(false);
-  const [contentData, setContentData, TEM_DATA, AD_LIST] = useContentData();
+  const [contentData, setContentData, TEM_DATA, AD_LIST, DAY_LIST] = useContentData();
 
   const dropdownClicked = () => {
     setIsClicked((prev) => !prev);
   };
 
   const conditionalVariable = (title) => {
+    if (title === '주간') {
+      return DAY_LIST.map((element, idx) => (
+        <SelectMultiple key={idx} onClick={(e) => onTitleClickHandler(e, type)}>
+          {element}
+        </SelectMultiple>
+      ));
+    }
     if (title === '매드업') {
       return '서비스 추가하기';
     }
-    if (title === '주간') {
-      return '야간';
-    }
     if (title === '전체광고') {
       return AD_LIST.map((element, idx) => (
-        <SelectMultiple key={idx} onClick={(e) => onTitleClickHandler(e)}>
+        <SelectMultiple key={idx} onClick={(e) => onTitleClickHandler(e, type)}>
           {element}
         </SelectMultiple>
       ));
