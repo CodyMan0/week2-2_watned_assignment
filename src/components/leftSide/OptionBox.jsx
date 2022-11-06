@@ -9,16 +9,24 @@ const OptionBox = () => {
     { id: 2, title: '광고관리' },
   ];
 
-  const { onOptionHandler } = useOption();
+  const { option, onOptionHandler } = useOption();
 
   return (
     <Container>
       <Categories title="광고센터" />
-      {AD_LISTS.map((adList) => (
-        <OptionItem key={adList.id} onClick={() => onOptionHandler(adList.id)}>
-          {adList.title}
-        </OptionItem>
-      ))}
+
+      {AD_LISTS.map((adList) => {
+        const comparison = option === adList.id;
+        return (
+          <OptionItem
+            key={adList.id}
+            onClick={() => onOptionHandler(adList.id)}
+            propOption={comparison}
+          >
+            {adList.title}
+          </OptionItem>
+        );
+      })}
     </Container>
   );
 };
@@ -32,8 +40,6 @@ const Container = styled.div`
 const OptionItem = styled.div`
   padding: ${(props) => props.theme.style.l};
   border-radius: 10px;
-  &:hover {
-    background-color: ${(props) => props.theme.style.hover};
-    color: ${(props) => props.theme.style.blue};
-  }
+  background: ${({ propOption }) => (propOption ? '#EDEFF1' : '#ffffff')};
+  color: ${({ propOption }) => (propOption ? '#586CF5' : 'black')};
 `;

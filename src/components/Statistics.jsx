@@ -2,21 +2,20 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Line } from 'react-chartjs-2';
-import {
-  Chart as ChartJS,
-  LineElement,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-} from 'chart.js';
+import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement } from 'chart.js';
 import ContentDropDown from './ContentDropDown';
 
 import StateIndicator from './StateIndicator';
+import processingArray from './processingArray';
 
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
 
 const Statistics = () => {
   const [stateValues, setStateValue] = useState([]);
+  const { report } = stateValues || {};
+  const { daily } = report || {};
+
+  const variable = processingArray('cpc', daily);
 
   useEffect(() => {
     axios.get('/data/data.json').then((res) => {

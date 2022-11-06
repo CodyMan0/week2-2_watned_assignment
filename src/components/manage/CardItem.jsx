@@ -4,7 +4,7 @@ import Information from './Information';
 
 const CardItem = ({ ad }) => {
   const { report } = ad;
-  console.log(report);
+
   return (
     <Container>
       <Title>
