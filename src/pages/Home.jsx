@@ -1,18 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import ContentPage from '../components/ContentPage';
 import Sidebar from '../components/leftSide/Sidebar';
 import ManagePage from '../components/manage/ManagePage';
-import { useOption } from '../context/dataContext';
+import AdListProvider from '../context/AdListContext';
+import { ContentContextProvider } from '../context/dataContext';
+import { useOption } from '../context/optionContext';
 
 const Home = () => {
   const { option } = useOption();
 
   return (
     <Container>
-      <Sidebar />
-      {option === 1 && <ContentPage />}
-      {option === 2 && <ManagePage />}
+      <ContentContextProvider>
+        <AdListProvider>
+          <Sidebar />
+          {option === 1 && <ContentPage />}
+          {option === 2 && <ManagePage />}
+        </AdListProvider>
+      </ContentContextProvider>
     </Container>
   );
 };

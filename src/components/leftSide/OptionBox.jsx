@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useOption } from '../../context/dataContext';
+import { useOption } from '../../context/optionContext';
 import Categories from './Categories';
 
 const OptionBox = () => {
@@ -41,5 +41,5 @@ const OptionItem = styled.div`
   padding: ${(props) => props.theme.style.l};
   border-radius: 10px;
   background: ${({ propOption }) => (propOption ? '#EDEFF1' : '#ffffff')};
-  color: ${({ propOption }) => (propOption ? '#586CF5' : 'black')};
+  color: ${({ propOption }) => (propOption ? '#586CF5' : '')};
 `;

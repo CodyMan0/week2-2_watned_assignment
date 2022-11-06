@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { OptionContextProvider } from './context/dataContext';
+import { ContentContextProvider } from './context/dataContext';
+import { OptionContextProvider } from './context/optionContext';
 import Home from './pages/Home';
 
 const Router = () => {

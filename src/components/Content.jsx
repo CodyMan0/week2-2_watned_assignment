@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useOption } from '../context/dataContext';
+import { useOption } from '../context/optionContext';
 import AdManagement from './manage/AdManagement';
 import Statistics from './Statistics';
 

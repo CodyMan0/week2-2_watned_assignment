@@ -6,20 +6,19 @@ import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement
 import ContentDropDown from './ContentDropDown';
 
 import StateIndicator from './StateIndicator';
-import processingArray from './processingArray';
+import processingArray from '../utils/processingArray';
+import { useContentData } from '../context/dataContext';
 
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
 
 const Statistics = () => {
-  const [stateValues, setStateValue] = useState([]);
-  const { report } = stateValues || {};
-  const { daily } = report || {};
+  const [contentData, setContentData, daily] = useContentData();
 
   useEffect(() => {
     axios.get('/data/data.json').then((res) => {
-      setStateValue(res.data);
+      setContentData(res.data);
     });
-  }, [setStateValue]);
+  }, []);
 
   const data = {
     labels: ['May 12', 'May 13', 'May 14', 'May 15', 'May 16'],

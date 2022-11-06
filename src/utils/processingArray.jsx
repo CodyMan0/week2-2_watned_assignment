@@ -1,4 +1,4 @@
-import averageCalc from './averageCalc';
+import averageCalc from '../components/averageCalc';
 
 export default function (key, arr = []) {
   const resultArr = [];

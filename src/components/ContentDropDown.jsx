@@ -1,16 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Dropdown from './leftSide/DropDown';
 
 const ContentDropDown = () => {
+  const [checkedTitle, setCheckedTitle] = useState({
+    FirstContent: 'ROAS',
+    SecondContent: '클릭수',
+  });
+  const onTitleClickHandler = (e, type) => {
+    setCheckedTitle({ ...checkedTitle, [type]: e.target.innerText });
+  };
+
   return (
     <Container>
       <SubContainer>
         <FirstDropDown>
-          <Dropdown title="ROAS">12dfdfdfdf 3</Dropdown>
+          <Dropdown
+            title={checkedTitle.FirstContent}
+            state={checkedTitle}
+            setState={setCheckedTitle}
+            onTitleClickHandler={onTitleClickHandler}
+            type="FirstContent"
+          />
         </FirstDropDown>
         <SecondDropDown>
-          <Dropdown title="클릭수">12dfdfdfdf 3</Dropdown>
+          <Dropdown
+            title={checkedTitle.SecondContent}
+            state={checkedTitle}
+            setState={setCheckedTitle}
+            onTitleClickHandler={onTitleClickHandler}
+            type="SecondContent"
+          />
         </SecondDropDown>
       </SubContainer>
       <ThirdDropDown>
