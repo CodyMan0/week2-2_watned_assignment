@@ -25,6 +25,7 @@ export default function AdListProvider({ children }) {
     }
   };
 
+  // 리듀서 (액션.type)!!
   // 그냥 필터를 이런식으로 해줬는데 구현은 했는데 도움이 될지는 모르겠다.
 
   const options = useMemo(

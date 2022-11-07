@@ -8,6 +8,7 @@ export const ContentContextProvider = ({ children }) => {
 
   const { report } = contentData || {};
   const { daily } = report || {};
+  console.log(daily);
 
   const ROAS = processingArray('roas', daily);
   const CPC = processingArray('cpc', daily);
